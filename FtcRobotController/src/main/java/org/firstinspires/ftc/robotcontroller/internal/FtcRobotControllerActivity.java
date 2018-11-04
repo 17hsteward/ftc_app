@@ -119,6 +119,7 @@ import org.firstinspires.ftc.robotcore.internal.ui.UILocation;
 import org.firstinspires.ftc.robotcore.internal.webserver.RobotControllerWebInfo;
 import org.firstinspires.ftc.robotcore.internal.webserver.WebServer;
 import org.firstinspires.inspection.RcInspectionActivity;
+import org.opencv.android.OpenCVLoader;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -167,6 +168,10 @@ public class FtcRobotControllerActivity extends Activity
 
   protected WifiMuteStateMachine wifiMuteStateMachine;
   protected MotionDetection motionDetection;
+
+  static{
+    OpenCVLoader.initDebug();
+  }
 
   protected class RobotRestarter implements Restarter {
 
